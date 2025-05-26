@@ -53,11 +53,11 @@ while true; do
             case "$message" in
             "on")
                 log_syslog "info" "Turning display on."
-                ./light_control.sh on
+                ./turn_on_display.sh
                 ;;
             "off")
                 log_syslog "info" "Turning display off."
-                ./light_control.sh off
+                ./turn_off_display.sh
                 ;;
             *)
                 log_syslog "warning" "Unknown command: $message"
